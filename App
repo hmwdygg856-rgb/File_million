@@ -1,0 +1,15 @@
+import os
+
+folder = "Ashiq_Kabosha"
+os.makedirs(folder, exist_ok=True)
+
+for i in range(1, 1_000_001):
+    filename = f"file_{i}.txt"
+    path = os.path.join(folder, filename)
+
+    with open(path, "w", encoding="utf-8") as f:
+        f.write("عاشق كابوشا")
+
+    if i % 1000 == 0:
+        print(f"تم انتهاء العمليه{i}")
+
